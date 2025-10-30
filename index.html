@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Indicadores - Proteção Social Básica | SEMCAS São Luís</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'azul-institucional': '#003d6e',
+                        'azul-claro': '#0066cc', 
+                        'amarelo-gov': '#f9a825',
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        * {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        .logo-municipio {
+            height: 54px;
+            width: auto;
+        }
+        
+        .card-kpi {
+            transition: all 0.25s ease;
+        }
+        
+        .card-kpi:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.14);
+        }
+        
+        table {
+            font-size: 15px;
+        }
+        
+        tbody tr {
+            transition: background-color 0.15s ease;
+        }
+        
+        tbody tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+        
+        tbody tr:hover {
+            background-color: #f0f4f8;
+        }
+        
+        h1, h2, h3, h4 {
+            line-height: 1.3;
+        }
+        
+        p {
+            line-height: 1.7;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Cabeçalho -->
+    <header class="bg-azul-institucional shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between py-3">
+                <div class="flex items-center gap-3">
+                    <img src="https://jurandy1.github.io/SitemaAlmoxarifadov2/SaoLuis.png" 
+                         alt="Prefeitura de São Luís" 
+                         class="logo-municipio"
+                         onerror="this.style.display='none'">
+                    <div>
+                        <h1 class="text-white text-lg sm:text-xl font-bold">SEMCAS</h1>
+                        <p class="text-gray-200 text-xs sm:text-sm">Secretaria da Criança e Assistência Social</p>
+                    </div>
+                </div>
+                
+                <nav class="hidden lg:flex gap-1">
+                    <a href="#" class="text-white px-3 py-2 rounded hover:bg-azul-claro transition duration-200 text-sm">Início</a>
+                    <a href="#" class="bg-amarelo-gov text-gray-900 px-3 py-2 rounded font-semibold text-sm">Painel PSB</a>
+                    <a href="#" class="text-white px-3 py-2 rounded hover:bg-azul-claro transition duration-200 text-sm">CRAS</a>
+                    <a href="#" class="text-white px-3 py-2 rounded hover:bg-azul-claro transition duration-200 text-sm">Relatórios</a>
+                    <a href="#" class="text-white px-3 py-2 rounded hover:bg-azul-claro transition duration-200 text-sm">Contato</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteudo -->
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        
+        <!-- Navegação estrutural -->
+        <nav class="text-sm text-gray-600 mb-5">
+            <a href="#" class="hover:text-azul-institucional">Página Inicial</a> › 
+            <a href="#" class="hover:text-azul-institucional">Superintendência de PSB</a> › 
+            <span class="text-gray-900 font-medium">Indicadores CRAS</span>
+        </nav>
+
+        <!-- Cabeçalho da página -->
+        <div class="bg-white rounded-lg shadow-sm p-5 sm:p-6 mb-6 border-l-4 border-azul-institucional">
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Indicadores da Proteção Social Básica</h2>
+            <p class="text-gray-700 text-base leading-relaxed mb-2">
+                Acompanhamento dos serviços e programas geridos pela <strong>Superintendência de Proteção Social Básica</strong> nos 20 Centros de Referência de Assistência Social (CRAS) do município de São Luís.
+            </p>
+            <p class="text-sm text-gray-600">
+                <strong>Última atualização:</strong> 25/10/2025 • <strong>Período:</strong> Setembro/2025
+            </p>
+        </div>
+
+        <!-- Cards de indicadores principais -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+            
+            <!-- Indicador 1 -->
+            <div class="bg-white rounded-lg shadow-md p-5 card-kpi border-l-4 border-blue-600">
+                <div class="flex justify-between items-start mb-3">
+                    <div class="flex-1">
+                        <p class="text-sm font-semibold text-gray-600 uppercase tracking-wide">Famílias no PAIF</p>
+                        <p class="text-xs text-gray-500 mt-1">Acompanhamento ativo</p>
+                    </div>
+                    <svg class="w-8 h-8 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                    </svg>
+                </div>
+                <div>
+                    <p class="text-4xl font-bold text-gray-900">8.964</p>
+                    <p class="text-xs text-green-600 mt-2 font-medium">↑ 5,2% vs mês anterior</p>
+                </div>
+            </div>
+
+            <!-- Indicador 2 -->
+            <div class="bg-white rounded-lg shadow-md p-5 card-kpi border-l-4 border-purple-600">
+                <div class="flex justify-between items-start mb-3">
+                    <div class="flex-1">
+                        <p class="text-sm font-semibold text-gray-600 uppercase tracking-wide">Taxa de Cobertura</p>
+                        <p class="text-xs text-gray-500 mt-1">Meta de referenciamento</p>
+                    </div>
+                    <svg class="w-8 h-8 text-purple-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                    </svg>
+                </div>
+                <div>
+                    <p class="text-4xl font-bold text-gray-900">67%</p>
+                    <div class="w-full bg-gray-200 rounded-full h-2 mt-3">
+                        <div class="bg-purple-600 h-2 rounded-full transition-all duration-500" style="width: 67%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Indicador 3 -->
+            <div class="bg-white rounded-lg shadow-md p-5 card-kpi border-l-4 border-green-600">
+                <div class="flex justify-between items-start mb-3">
+                    <div class="flex-1">
+                        <p class="text-sm font-semibold text-gray-600 uppercase tracking-wide">Usuários SCFV</p>
+                        <p class="text-xs text-gray-500 mt-1">Grupos de convivência</p>
+                    </div>
+                    <svg class="w-8 h-8 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                    </svg>
+                </div>
+                <div>
+                    <p class="text-4xl font-bold text-gray-900">6.437</p>
+                    <p class="text-xs text-gray-600 mt-2">Ocupação: 6.437/7.200 <span class="font-semibold text-green-600">(89%)</span></p>
+                </div>
+            </div>
+
+            <!-- Indicador 4 -->
+            <div class="bg-white rounded-lg shadow-md p-5 card-kpi border-l-4 border-orange-500">
+                <div class="flex justify-between items-start mb-3">
+                    <div class="flex-1">
+                        <p class="text-sm font-semibold text-gray-600 uppercase tracking-wide">Carga de Trabalho</p>
+                        <p class="text-xs text-gray-500 mt-1">Famílias por técnico</p>
+                    </div>
+                    <svg class="w-8 h-8 text-orange-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                    </svg>
+                </div>
+                <div>
+                    <p class="text-4xl font-bold text-gray-900">448</p>
+                    <div class="bg-orange-50 border border-orange-200 px-3 py-1.5 rounded text-xs mt-2 inline-block">
+                        <span class="text-orange-700 font-semibold">⚠ Parâmetro: até 350 famílias</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Indicadores secundários -->
+        <h3 class="text-xl font-bold text-gray-900 mb-4 mt-10">Indicadores de Qualidade e Efetividade</h3>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
+            
+            <div class="bg-white rounded-lg shadow p-5">
+                <p class="text-sm text-gray-600 font-semibold mb-1">Taxa de Sucesso PAIF</p>
+                <p class="text-3xl font-bold text-gray-900 mt-2">81%</p>
+                <p class="text-xs text-gray-500 mt-2 leading-relaxed">Famílias que atingiram os objetivos do plano</p>
+            </div>
+
+            <div class="bg-white rounded-lg shadow p-5">
+                <p class="text-sm text-gray-600 font-semibold mb-1">Frequência Média SCFV</p>
+                <p class="text-3xl font-bold text-gray-900 mt-2">72%</p>
+                <p class="text-xs text-gray-500 mt-2 leading-relaxed">Presença nos grupos de convivência</p>
+            </div>
+
+            <div class="bg-white rounded-lg shadow p-5">
+                <p class="text-sm text-gray-600 font-semibold mb-1">Encaminhamentos Efetivos</p>
+                <p class="text-3xl font-bold text-gray-900 mt-2">74%</p>
+                <p class="text-xs text-gray-500 mt-2 leading-relaxed">Referências para saúde, educação e outras políticas</p>
+            </div>
+
+            <div class="bg-white rounded-lg shadow p-5">
+                <p class="text-sm text-gray-600 font-semibold mb-1">Taxa de Reentrada (6m)</p>
+                <p class="text-3xl font-bold text-gray-900 mt-2">13,8%</p>
+                <p class="text-xs text-gray-500 mt-2 leading-relaxed">Famílias que retornaram após desligamento</p>
+            </div>
+        </div>
+
+        <!-- Tabela detalhada por CRAS -->
+        <div class="bg-white rounded-lg shadow-lg p-5 sm:p-6 mt-8">
+            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-5 gap-3">
+                <div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-gray-900">Desempenho por Unidade CRAS</h3>
+                    <p class="text-sm text-gray-600 mt-1">Dados consolidados das 20 unidades territorializadas</p>
+                </div>
+            </div>
+            
+            <div class="overflow-x-auto -mx-5 sm:mx-0">
+                <div class="inline-block min-w-full align-middle">
+                    <table class="min-w-full border-collapse">
+                        <thead>
+                            <tr class="bg-gray-100 border-b-2 border-gray-300">
+                                <th class="text-left py-3.5 px-4 font-semibold text-gray-700 text-sm">Unidade CRAS</th>
+                                <th class="text-left py-3.5 px-4 font-semibold text-gray-700 text-sm">Famílias PAIF</th>
+                                <th class="text-left py-3.5 px-4 font-semibold text-gray-700 text-sm">SCFV</th>
+                                <th class="text-left py-3.5 px-4 font-semibold text-gray-700 text-sm">Taxa Conclusão</th>
+                                <th class="text-left py-3.5 px-4 font-semibold text-gray-700 text-sm">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-700">
+                            <tr class="border-b border-gray-200">
+                                <td class="py-3.5 px-4 font-medium">CRAS Centro</td>
+                                <td class="py-3.5 px-4">542</td>
+                                <td class="py-3.5 px-4">187/240</td>
+                                <td class="py-3.5 px-4"><span class="font-semibold text-yellow-700">76%</span></td>
+                                <td class="py-3.5 px-4"><span class="text-xs bg-yellow-100 text-yellow-800 px-2.5 py-1 rounded-full font-medium">Atenção</span></td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="py-3.5 px-4 font-medium">CRAS Estiva</td>
+                                <td class="py-3.5 px-4">398</td>
+                                <td class="py-3.5 px-4">295/320</td>
+                                <td class="py-3.5 px-4"><span class="font-semibold text-green-700">91%</span></td>
+                                <td class="py-3.5 px-4"><span class="text-xs bg-green-100 text-green-800 px-2.5 py-1 rounded-full font-medium">Adequado</span></td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="py-3.5 px-4 font-medium">CRAS Cohab (antigo Forquilha)</td>
+                                <td class="py-3.5 px-4">687</td>
+                                <td class="py-3.5 px-4">441/480</td>
+                                <td class="py-3.5 px-4"><span class="font-semibold text-green-700">84%</span></td>
+                                <td class="py-3.5 px-4"><span class="text-xs bg-green-100 text-green-800 px-2.5 py-1 rounded-full font-medium">Adequado</span></td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="py-3.5 px-4 font-medium">CRAS Coroadinho</td>
+                                <td class="py-3.5 px-4">512</td>
+                                <td class="py-3.5 px-4">378/400</td>
+                                <td class="py-3.5 px-4"><span class="font-semibold text-green-700">88%</span></td>
+                                <td class="py-3.5 px-4"><span class="text-xs bg-green-100 text-green-800 px-2.5 py-1 rounded-full font-medium">Adequado</span></td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="py-3.5 px-4 font-medium">CRAS Vila Bacanga</td>
+                                <td class="py-3.5 px-4">421</td>
+                                <td class="py-3.5 px-4">246/300</td>
+                                <td class="py-3.5 px-4"><span class="font-semibold text-green-700">79%</span></td>
+                                <td class="py-3.5 px-4"><span class="text-xs bg-blue-100 text-blue-800 px-2.5 py-1 rounded-full font-medium">Regular</span></td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="py-3.5 px-4 font-medium">CRAS Cidade Operária</td>
+                                <td class="py-3.5 px-4">378</td>
+                                <td class="py-3.5 px-4">312/360</td>
+                                <td class="py-3.5 px-4"><span class="font-semibold text-green-700">86%</span></td>
+                                <td class="py-3.5 px-4"><span class="text-xs bg-green-100 text-green-800 px-2.5 py-1 rounded-full font-medium">Adequado</span></td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="py-3.5 px-4 font-medium">CRAS Anjo da Guarda</td>
+                                <td class="py-3.5 px-4">346</td>
+                                <td class="py-3.5 px-4">198/280</td>
+                                <td class="py-3.5 px-4"><span class="font-semibold text-green-700">82%</span></td>
+                                <td class="py-3.5 px-4"><span class="text-xs bg-green-100 text-green-800 px-2.5 py-1 rounded-full font-medium">Adequado</span></td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="py-3.5 px-4 font-medium">CRAS Maracanã</td>
+                                <td class="py-3.5 px-4">495</td>
+                                <td class="py-3.5 px-4">367/420</td>
+                                <td class="py-3.5 px-4"><span class="font-semibold text-green-700">83%</span></td>
+                                <td class="py-3.5 px-4"><span class="text-xs bg-green-100 text-green-800 px-2.5 py-1 rounded-full font-medium">Adequado</span></td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="py-3.5 px-4 font-medium">CRAS Anil</td>
+                                <td class="py-3.5 px-4">389</td>
+                                <td class="py-3.5 px-4">289/340</td>
+                                <td class="py-3.5 px-4"><span class="font-semibold text-green-700">80%</span></td>
+                                <td class="py-3.5 px-4"><span class="text-xs bg-green-100 text-green-800 px-2.5 py-1 rounded-full font-medium">Adequado</span></td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="py-3.5 px-4 font-medium">CRAS Vila Nova</td>
+                                <td class="py-3.5 px-4">412</td>
+                                <td class="py-3.5 px-4">301/360</td>
+                                <td class="py-3.5 px-4"><span class="font-semibold text-yellow-700">77%</span></td>
+                                <td class="py-3.5 px-4"><span class="text-xs bg-yellow-100 text-yellow-800 px-2.5 py-1 rounded-full font-medium">Atenção</span></td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="py-3.5 px-4 font-medium">CRAS João de Deus</td>
+                                <td class="py-3.5 px-4">456</td>
+                                <td class="py-3.5 px-4">334/380</td>
+                                <td class="py-3.5 px-4"><span class="font-semibold text-green-700">85%</span></td>
+                                <td class="py-3.5 px-4"><span class="text-xs bg-green-100 text-green-800 px-2.5 py-1 rounded-full font-medium">Adequado</span></td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="py-3.5 px-4 font-medium">CRAS Bequimão (antigo Vila Palmeira)</td>
+                                <td class="py-3.5 px-4">367</td>
+                                <td class="py-3.5 px-4">234/300</td>
+                                <td class="py-3.5 px-4"><span class="font-semibold text-green-700">81%</span></td>
+                                <td class="py-3.5 px-4"><span class="text-xs bg-green-100 text-green-800 px-2.5 py-1 rounded-full font-medium">Adequado</span></td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="py-3.5 px-4 font-medium">CRAS São Francisco</td>
+                                <td class="py-3.5 px-4">423</td>
+                                <td class="py-3.5 px-4">312/380</td>
+                                <td class="py-3.5 px-4"><span class="font-semibold text-green-700">79%</span></td>
+                                <td class="py-3.5 px-4"><span class="text-xs bg-blue-100 text-blue-800 px-2.5 py-1 rounded-full font-medium">Regular</span></td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="py-3.5 px-4 font-medium">CRAS Bairro de Fátima</td>
+                                <td class="py-3.5 px-4">501</td>
+                                <td class="py-3.5 px-4">387/440</td>
+                                <td class="py-3.5 px-4"><span class="font-semibold text-green-700">87%</span></td>
+                                <td class="py-3.5 px-4"><span class="text-xs bg-green-100 text-green-800 px-2.5 py-1 rounded-full font-medium">Adequado</span></td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="py-3.5 px-4 font-medium">CRAS São Raimundo</td>
+                                <td class="py-3.5 px-4">567</td>
+                                <td class="py-3.5 px-4">398/460</td>
+                                <td class="py-3.5 px-4"><span class="font-semibold text-green-700">83%</span></td>
+                                <td class="py-3.5 px-4"><span class="text-xs bg-green-100 text-green-800 px-2.5 py-1 rounded-full font-medium">Adequado</span></td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="py-3.5 px-4 font-medium">CRAS Liberdade</td>
+                                <td class="py-3.5 px-4">289</td>
+                                <td class="py-3.5 px-4">176/240</td>
+                                <td class="py-3.5 px-4"><span class="font-semibold text-green-700">78%</span></td>
+                                <td class="py-3.5 px-4"><span class="text-xs bg-blue-100 text-blue-800 px-2.5 py-1 rounded-full font-medium">Regular</span></td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="py-3.5 px-4 font-medium">CRAS Cidade Olímpica</td>
+                                <td class="py-3.5 px-4">312</td>
+                                <td class="py-3.5 px-4">245/300</td>
+                                <td class="py-3.5 px-4"><span class="font-semibold text-green-700">84%</span></td>
+                                <td class="py-3.5 px-4"><span class="text-xs bg-green-100 text-green-800 px-2.5 py-1 rounded-full font-medium">Adequado</span></td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="py-3.5 px-4 font-medium">CRAS Vinhais (antigo Vicente Fialho)</td>
+                                <td class="py-3.5 px-4">534</td>
+                                <td class="py-3.5 px-4">412/480</td>
+                                <td class="py-3.5 px-4"><span class="font-semibold text-green-700">86%</span></td>
+                                <td class="py-3.5 px-4"><span class="text-xs bg-green-100 text-green-800 px-2.5 py-1 rounded-full font-medium">Adequado</span></td>
+                            </tr>
+                            <tr class="border-b border-gray-200">
+                                <td class="py-3.5 px-4 font-medium">CRAS Turu (antigo Sol e Mar)</td>
+                                <td class="py-3.5 px-4">445</td>
+                                <td class="py-3.5 px-4">321/400</td>
+                                <td class="py-3.5 px-4"><span class="font-semibold text-green-700">82%</span></td>
+                                <td class="py-3.5 px-4"><span class="text-xs bg-green-100 text-green-800 px-2.5 py-1 rounded-full font-medium">Adequado</span></td>
+                            </tr>
+                            <tr>
+                                <td class="py-3.5 px-4 font-medium">CRAS Janaína</td>
+                                <td class="py-3.5 px-4">489</td>
+                                <td class="py-3.5 px-4">356/420</td>
+                                <td class="py-3.5 px-4"><span class="font-semibold text-green-700">80%</span></td>
+                                <td class="py-3.5 px-4"><span class="text-xs bg-green-100 text-green-800 px-2.5 py-1 rounded-full font-medium">Adequado</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Ações e botoes -->
+            <div class="mt-6 pt-5 border-t flex flex-wrap gap-3">
+                <button class="bg-amarelo-gov hover:bg-yellow-600 text-gray-900 px-5 py-2.5 rounded-lg font-semibold text-sm inline-flex items-center gap-2 transition-colors duration-200">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                    </svg>
+                    Exportar PDF
+                </button>
+                
+                <button class="bg-white hover:bg-gray-50 border-2 border-gray-300 text-gray-700 px-5 py-2.5 rounded-lg text-sm font-medium inline-flex items-center gap-2 transition-all duration-200">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                    </svg>
+                    Baixar Excel
+                </button>
+
+                <button class="bg-white hover:bg-gray-50 border-2 border-gray-300 text-gray-700 px-5 py-2.5 rounded-lg text-sm font-medium inline-flex items-center gap-2 transition-all duration-200">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/>
+                    </svg>
+                    Compartilhar
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-900 text-gray-300 mt-16 py-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="text-white font-bold mb-3 text-base">SEMCAS</h4>
+                  
+           
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
