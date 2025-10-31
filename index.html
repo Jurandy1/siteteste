@@ -124,9 +124,9 @@
         </div>
 
         <!-- Cards de indicadores principais -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
             
-            <!-- Indicador 1 -->
+            <!-- Indicador 1: Famílias PAIF -->
             <div class="bg-white rounded-lg shadow-md p-5 card-kpi border-l-4 border-blue-600">
                 <div class="flex justify-between items-start mb-3">
                     <div class="flex-1">
@@ -143,26 +143,7 @@
                 </div>
             </div>
 
-            <!-- Indicador 2 -->
-            <div class="bg-white rounded-lg shadow-md p-5 card-kpi border-l-4 border-purple-600">
-                <div class="flex justify-between items-start mb-3">
-                    <div class="flex-1">
-                        <p class="text-sm font-semibold text-gray-600 uppercase tracking-wide">Taxa de Cobertura</p>
-                        <p class="text-xs text-gray-500 mt-1">Meta de referenciamento</p>
-                    </div>
-                    <svg class="w-8 h-8 text-purple-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-                    </svg>
-                </div>
-                <div>
-                    <p class="text-4xl font-bold text-gray-900">67%</p>
-                    <div class="w-full bg-gray-200 rounded-full h-2 mt-3">
-                        <div class="bg-purple-600 h-2 rounded-full transition-all duration-500" style="width: 67%"></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Indicador 3 -->
+            <!-- Indicador 2: Usuários SCFV -->
             <div class="bg-white rounded-lg shadow-md p-5 card-kpi border-l-4 border-green-600">
                 <div class="flex justify-between items-start mb-3">
                     <div class="flex-1">
@@ -179,53 +160,38 @@
                 </div>
             </div>
 
-            <!-- Indicador 4 -->
-            <div class="bg-white rounded-lg shadow-md p-5 card-kpi border-l-4 border-orange-500">
+            <!-- Indicador 3: Programa Criança Feliz -->
+            <div class="bg-white rounded-lg shadow-md p-5 card-kpi border-l-4 border-pink-500">
                 <div class="flex justify-between items-start mb-3">
                     <div class="flex-1">
-                        <p class="text-sm font-semibold text-gray-600 uppercase tracking-wide">Carga de Trabalho</p>
-                        <p class="text-xs text-gray-500 mt-1">Famílias por técnico</p>
+                        <p class="text-sm font-semibold text-gray-600 uppercase tracking-wide">Criança Feliz</p>
+                        <p class="text-xs text-gray-500 mt-1">Visitas domiciliares</p>
                     </div>
-                    <svg class="w-8 h-8 text-orange-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                    <svg class="w-8 h-8 text-pink-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                     </svg>
                 </div>
                 <div>
-                    <p class="text-4xl font-bold text-gray-900">448</p>
-                    <div class="bg-orange-50 border border-orange-200 px-3 py-1.5 rounded text-xs mt-2 inline-block">
-                        <span class="text-orange-700 font-semibold">⚠ Parâmetro: até 350 famílias</span>
-                    </div>
+                    <p class="text-4xl font-bold text-gray-900">2.847</p>
+                    <p class="text-xs text-gray-600 mt-2">Crianças acompanhadas de 0 a 6 anos</p>
                 </div>
             </div>
-        </div>
 
-        <!-- Indicadores secundários -->
-        <h3 class="text-xl font-bold text-gray-900 mb-4 mt-10">Indicadores de Qualidade e Efetividade</h3>
-        
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
-            
-            <div class="bg-white rounded-lg shadow p-5">
-                <p class="text-sm text-gray-600 font-semibold mb-1">Taxa de Sucesso PAIF</p>
-                <p class="text-3xl font-bold text-gray-900 mt-2">81%</p>
-                <p class="text-xs text-gray-500 mt-2 leading-relaxed">Famílias que atingiram os objetivos do plano</p>
-            </div>
-
-            <div class="bg-white rounded-lg shadow p-5">
-                <p class="text-sm text-gray-600 font-semibold mb-1">Frequência Média SCFV</p>
-                <p class="text-3xl font-bold text-gray-900 mt-2">72%</p>
-                <p class="text-xs text-gray-500 mt-2 leading-relaxed">Presença nos grupos de convivência</p>
-            </div>
-
-            <div class="bg-white rounded-lg shadow p-5">
-                <p class="text-sm text-gray-600 font-semibold mb-1">Encaminhamentos Efetivos</p>
-                <p class="text-3xl font-bold text-gray-900 mt-2">74%</p>
-                <p class="text-xs text-gray-500 mt-2 leading-relaxed">Referências para saúde, educação e outras políticas</p>
-            </div>
-
-            <div class="bg-white rounded-lg shadow p-5">
-                <p class="text-sm text-gray-600 font-semibold mb-1">Taxa de Reentrada (6m)</p>
-                <p class="text-3xl font-bold text-gray-900 mt-2">13,8%</p>
-                <p class="text-xs text-gray-500 mt-2 leading-relaxed">Famílias que retornaram após desligamento</p>
+            <!-- Indicador 4: PSB no Domicílio -->
+            <div class="bg-white rounded-lg shadow-md p-5 card-kpi border-l-4 border-purple-600">
+                <div class="flex justify-between items-start mb-3">
+                    <div class="flex-1">
+                        <p class="text-sm font-semibold text-gray-600 uppercase tracking-wide">PSB no Domicílio</p>
+                        <p class="text-xs text-gray-500 mt-1">Idosos e pessoas com deficiência</p>
+                    </div>
+                    <svg class="w-8 h-8 text-purple-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                    </svg>
+                </div>
+                <div>
+                    <p class="text-4xl font-bold text-gray-900">1.324</p>
+                    <p class="text-xs text-gray-600 mt-2">Atendimentos domiciliares realizados</p>
+                </div>
             </div>
         </div>
 
@@ -246,7 +212,8 @@
                                 <th class="text-left py-3.5 px-4 font-semibold text-gray-700 text-sm">Unidade CRAS</th>
                                 <th class="text-left py-3.5 px-4 font-semibold text-gray-700 text-sm">Famílias PAIF</th>
                                 <th class="text-left py-3.5 px-4 font-semibold text-gray-700 text-sm">SCFV</th>
-                                <th class="text-left py-3.5 px-4 font-semibold text-gray-700 text-sm">Taxa Conclusão</th>
+                                <th class="text-left py-3.5 px-4 font-semibold text-gray-700 text-sm">Criança Feliz</th>
+                                <th class="text-left py-3.5 px-4 font-semibold text-gray-700 text-sm">PSB Domicílio</th>
                                 <th class="text-left py-3.5 px-4 font-semibold text-gray-700 text-sm">Status</th>
                             </tr>
                         </thead>
@@ -254,141 +221,161 @@
                             <tr class="border-b border-gray-200">
                                 <td class="py-3.5 px-4 font-medium">CRAS Centro</td>
                                 <td class="py-3.5 px-4">542</td>
-                                <td class="py-3.5 px-4">187/240</td>
-                                <td class="py-3.5 px-4"><span class="font-semibold text-yellow-700">76%</span></td>
-                                <td class="py-3.5 px-4"><span class="text-xs bg-yellow-100 text-yellow-800 px-2.5 py-1 rounded-full font-medium">Atenção</span></td>
+                                <td class="py-3.5 px-4">187</td>
+                                <td class="py-3.5 px-4">124</td>
+                                <td class="py-3.5 px-4">78</td>
+                                <td class="py-3.5 px-4"><span class="text-xs bg-green-100 text-green-800 px-2.5 py-1 rounded-full font-medium">Adequado</span></td>
                             </tr>
                             <tr class="border-b border-gray-200">
                                 <td class="py-3.5 px-4 font-medium">CRAS Estiva</td>
                                 <td class="py-3.5 px-4">398</td>
-                                <td class="py-3.5 px-4">295/320</td>
-                                <td class="py-3.5 px-4"><span class="font-semibold text-green-700">91%</span></td>
+                                <td class="py-3.5 px-4">295</td>
+                                <td class="py-3.5 px-4">98</td>
+                                <td class="py-3.5 px-4">54</td>
                                 <td class="py-3.5 px-4"><span class="text-xs bg-green-100 text-green-800 px-2.5 py-1 rounded-full font-medium">Adequado</span></td>
                             </tr>
                             <tr class="border-b border-gray-200">
                                 <td class="py-3.5 px-4 font-medium">CRAS Cohab (antigo Forquilha)</td>
                                 <td class="py-3.5 px-4">687</td>
-                                <td class="py-3.5 px-4">441/480</td>
-                                <td class="py-3.5 px-4"><span class="font-semibold text-green-700">84%</span></td>
+                                <td class="py-3.5 px-4">441</td>
+                                <td class="py-3.5 px-4">187</td>
+                                <td class="py-3.5 px-4">92</td>
                                 <td class="py-3.5 px-4"><span class="text-xs bg-green-100 text-green-800 px-2.5 py-1 rounded-full font-medium">Adequado</span></td>
                             </tr>
                             <tr class="border-b border-gray-200">
                                 <td class="py-3.5 px-4 font-medium">CRAS Coroadinho</td>
                                 <td class="py-3.5 px-4">512</td>
-                                <td class="py-3.5 px-4">378/400</td>
-                                <td class="py-3.5 px-4"><span class="font-semibold text-green-700">88%</span></td>
+                                <td class="py-3.5 px-4">378</td>
+                                <td class="py-3.5 px-4">145</td>
+                                <td class="py-3.5 px-4">67</td>
                                 <td class="py-3.5 px-4"><span class="text-xs bg-green-100 text-green-800 px-2.5 py-1 rounded-full font-medium">Adequado</span></td>
                             </tr>
                             <tr class="border-b border-gray-200">
                                 <td class="py-3.5 px-4 font-medium">CRAS Vila Bacanga</td>
                                 <td class="py-3.5 px-4">421</td>
-                                <td class="py-3.5 px-4">246/300</td>
-                                <td class="py-3.5 px-4"><span class="font-semibold text-green-700">79%</span></td>
+                                <td class="py-3.5 px-4">246</td>
+                                <td class="py-3.5 px-4">112</td>
+                                <td class="py-3.5 px-4">58</td>
                                 <td class="py-3.5 px-4"><span class="text-xs bg-blue-100 text-blue-800 px-2.5 py-1 rounded-full font-medium">Regular</span></td>
                             </tr>
                             <tr class="border-b border-gray-200">
                                 <td class="py-3.5 px-4 font-medium">CRAS Cidade Operária</td>
                                 <td class="py-3.5 px-4">378</td>
-                                <td class="py-3.5 px-4">312/360</td>
-                                <td class="py-3.5 px-4"><span class="font-semibold text-green-700">86%</span></td>
+                                <td class="py-3.5 px-4">312</td>
+                                <td class="py-3.5 px-4">89</td>
+                                <td class="py-3.5 px-4">45</td>
                                 <td class="py-3.5 px-4"><span class="text-xs bg-green-100 text-green-800 px-2.5 py-1 rounded-full font-medium">Adequado</span></td>
                             </tr>
                             <tr class="border-b border-gray-200">
                                 <td class="py-3.5 px-4 font-medium">CRAS Anjo da Guarda</td>
                                 <td class="py-3.5 px-4">346</td>
-                                <td class="py-3.5 px-4">198/280</td>
-                                <td class="py-3.5 px-4"><span class="font-semibold text-green-700">82%</span></td>
+                                <td class="py-3.5 px-4">198</td>
+                                <td class="py-3.5 px-4">76</td>
+                                <td class="py-3.5 px-4">41</td>
                                 <td class="py-3.5 px-4"><span class="text-xs bg-green-100 text-green-800 px-2.5 py-1 rounded-full font-medium">Adequado</span></td>
                             </tr>
                             <tr class="border-b border-gray-200">
                                 <td class="py-3.5 px-4 font-medium">CRAS Maracanã</td>
                                 <td class="py-3.5 px-4">495</td>
-                                <td class="py-3.5 px-4">367/420</td>
-                                <td class="py-3.5 px-4"><span class="font-semibold text-green-700">83%</span></td>
+                                <td class="py-3.5 px-4">367</td>
+                                <td class="py-3.5 px-4">134</td>
+                                <td class="py-3.5 px-4">71</td>
                                 <td class="py-3.5 px-4"><span class="text-xs bg-green-100 text-green-800 px-2.5 py-1 rounded-full font-medium">Adequado</span></td>
                             </tr>
                             <tr class="border-b border-gray-200">
                                 <td class="py-3.5 px-4 font-medium">CRAS Anil</td>
                                 <td class="py-3.5 px-4">389</td>
-                                <td class="py-3.5 px-4">289/340</td>
-                                <td class="py-3.5 px-4"><span class="font-semibold text-green-700">80%</span></td>
+                                <td class="py-3.5 px-4">289</td>
+                                <td class="py-3.5 px-4">94</td>
+                                <td class="py-3.5 px-4">52</td>
                                 <td class="py-3.5 px-4"><span class="text-xs bg-green-100 text-green-800 px-2.5 py-1 rounded-full font-medium">Adequado</span></td>
                             </tr>
                             <tr class="border-b border-gray-200">
                                 <td class="py-3.5 px-4 font-medium">CRAS Vila Nova</td>
                                 <td class="py-3.5 px-4">412</td>
-                                <td class="py-3.5 px-4">301/360</td>
-                                <td class="py-3.5 px-4"><span class="font-semibold text-yellow-700">77%</span></td>
+                                <td class="py-3.5 px-4">301</td>
+                                <td class="py-3.5 px-4">108</td>
+                                <td class="py-3.5 px-4">63</td>
                                 <td class="py-3.5 px-4"><span class="text-xs bg-yellow-100 text-yellow-800 px-2.5 py-1 rounded-full font-medium">Atenção</span></td>
                             </tr>
                             <tr class="border-b border-gray-200">
                                 <td class="py-3.5 px-4 font-medium">CRAS João de Deus</td>
                                 <td class="py-3.5 px-4">456</td>
-                                <td class="py-3.5 px-4">334/380</td>
-                                <td class="py-3.5 px-4"><span class="font-semibold text-green-700">85%</span></td>
+                                <td class="py-3.5 px-4">334</td>
+                                <td class="py-3.5 px-4">121</td>
+                                <td class="py-3.5 px-4">69</td>
                                 <td class="py-3.5 px-4"><span class="text-xs bg-green-100 text-green-800 px-2.5 py-1 rounded-full font-medium">Adequado</span></td>
                             </tr>
                             <tr class="border-b border-gray-200">
                                 <td class="py-3.5 px-4 font-medium">CRAS Bequimão (antigo Vila Palmeira)</td>
                                 <td class="py-3.5 px-4">367</td>
-                                <td class="py-3.5 px-4">234/300</td>
-                                <td class="py-3.5 px-4"><span class="font-semibold text-green-700">81%</span></td>
+                                <td class="py-3.5 px-4">234</td>
+                                <td class="py-3.5 px-4">87</td>
+                                <td class="py-3.5 px-4">48</td>
                                 <td class="py-3.5 px-4"><span class="text-xs bg-green-100 text-green-800 px-2.5 py-1 rounded-full font-medium">Adequado</span></td>
                             </tr>
                             <tr class="border-b border-gray-200">
                                 <td class="py-3.5 px-4 font-medium">CRAS São Francisco</td>
                                 <td class="py-3.5 px-4">423</td>
-                                <td class="py-3.5 px-4">312/380</td>
-                                <td class="py-3.5 px-4"><span class="font-semibold text-green-700">79%</span></td>
+                                <td class="py-3.5 px-4">312</td>
+                                <td class="py-3.5 px-4">105</td>
+                                <td class="py-3.5 px-4">61</td>
                                 <td class="py-3.5 px-4"><span class="text-xs bg-blue-100 text-blue-800 px-2.5 py-1 rounded-full font-medium">Regular</span></td>
                             </tr>
                             <tr class="border-b border-gray-200">
                                 <td class="py-3.5 px-4 font-medium">CRAS Bairro de Fátima</td>
                                 <td class="py-3.5 px-4">501</td>
-                                <td class="py-3.5 px-4">387/440</td>
-                                <td class="py-3.5 px-4"><span class="font-semibold text-green-700">87%</span></td>
+                                <td class="py-3.5 px-4">387</td>
+                                <td class="py-3.5 px-4">142</td>
+                                <td class="py-3.5 px-4">73</td>
                                 <td class="py-3.5 px-4"><span class="text-xs bg-green-100 text-green-800 px-2.5 py-1 rounded-full font-medium">Adequado</span></td>
                             </tr>
                             <tr class="border-b border-gray-200">
                                 <td class="py-3.5 px-4 font-medium">CRAS São Raimundo</td>
                                 <td class="py-3.5 px-4">567</td>
-                                <td class="py-3.5 px-4">398/460</td>
-                                <td class="py-3.5 px-4"><span class="font-semibold text-green-700">83%</span></td>
+                                <td class="py-3.5 px-4">398</td>
+                                <td class="py-3.5 px-4">159</td>
+                                <td class="py-3.5 px-4">85</td>
                                 <td class="py-3.5 px-4"><span class="text-xs bg-green-100 text-green-800 px-2.5 py-1 rounded-full font-medium">Adequado</span></td>
                             </tr>
                             <tr class="border-b border-gray-200">
                                 <td class="py-3.5 px-4 font-medium">CRAS Liberdade</td>
                                 <td class="py-3.5 px-4">289</td>
-                                <td class="py-3.5 px-4">176/240</td>
-                                <td class="py-3.5 px-4"><span class="font-semibold text-green-700">78%</span></td>
+                                <td class="py-3.5 px-4">176</td>
+                                <td class="py-3.5 px-4">68</td>
+                                <td class="py-3.5 px-4">39</td>
                                 <td class="py-3.5 px-4"><span class="text-xs bg-blue-100 text-blue-800 px-2.5 py-1 rounded-full font-medium">Regular</span></td>
                             </tr>
                             <tr class="border-b border-gray-200">
                                 <td class="py-3.5 px-4 font-medium">CRAS Cidade Olímpica</td>
                                 <td class="py-3.5 px-4">312</td>
-                                <td class="py-3.5 px-4">245/300</td>
-                                <td class="py-3.5 px-4"><span class="font-semibold text-green-700">84%</span></td>
+                                <td class="py-3.5 px-4">245</td>
+                                <td class="py-3.5 px-4">82</td>
+                                <td class="py-3.5 px-4">47</td>
                                 <td class="py-3.5 px-4"><span class="text-xs bg-green-100 text-green-800 px-2.5 py-1 rounded-full font-medium">Adequado</span></td>
                             </tr>
                             <tr class="border-b border-gray-200">
                                 <td class="py-3.5 px-4 font-medium">CRAS Vinhais (antigo Vicente Fialho)</td>
                                 <td class="py-3.5 px-4">534</td>
-                                <td class="py-3.5 px-4">412/480</td>
-                                <td class="py-3.5 px-4"><span class="font-semibold text-green-700">86%</span></td>
+                                <td class="py-3.5 px-4">412</td>
+                                <td class="py-3.5 px-4">151</td>
+                                <td class="py-3.5 px-4">79</td>
                                 <td class="py-3.5 px-4"><span class="text-xs bg-green-100 text-green-800 px-2.5 py-1 rounded-full font-medium">Adequado</span></td>
                             </tr>
                             <tr class="border-b border-gray-200">
                                 <td class="py-3.5 px-4 font-medium">CRAS Turu (antigo Sol e Mar)</td>
                                 <td class="py-3.5 px-4">445</td>
-                                <td class="py-3.5 px-4">321/400</td>
-                                <td class="py-3.5 px-4"><span class="font-semibold text-green-700">82%</span></td>
+                                <td class="py-3.5 px-4">321</td>
+                                <td class="py-3.5 px-4">118</td>
+                                <td class="py-3.5 px-4">65</td>
                                 <td class="py-3.5 px-4"><span class="text-xs bg-green-100 text-green-800 px-2.5 py-1 rounded-full font-medium">Adequado</span></td>
                             </tr>
                             <tr>
                                 <td class="py-3.5 px-4 font-medium">CRAS Janaína</td>
                                 <td class="py-3.5 px-4">489</td>
-                                <td class="py-3.5 px-4">356/420</td>
-                                <td class="py-3.5 px-4"><span class="font-semibold text-green-700">80%</span></td>
+                                <td class="py-3.5 px-4">356</td>
+                                <td class="py-3.5 px-4">129</td>
+                                <td class="py-3.5 px-4">72</td>
                                 <td class="py-3.5 px-4"><span class="text-xs bg-green-100 text-green-800 px-2.5 py-1 rounded-full font-medium">Adequado</span></td>
                             </tr>
                         </tbody>
@@ -429,10 +416,13 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
                     <h4 class="text-white font-bold mb-3 text-base">SEMCAS</h4>
-                  
-           
+                    <p class="text-sm leading-relaxed">
+                        Secretaria Municipal da Criança e Assistência Social de São Luís
+                    </p>
+              
             </div>
         </div>
     </footer>
+
 </body>
 </html>
